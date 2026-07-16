@@ -75,7 +75,7 @@ function jsonLd(){
     "image":D.brand.url+"/assets/img/logo-purple.png",
     "description":D.seo.description,
     "telephone":"+"+D.brand.whatsapp,
-    "priceRange":"R$ 350–1200",
+    "priceRange":"R$ 500–3000",
     "areaServed":"Botafogo, Rio de Janeiro",
     "address":{"@type":"PostalAddress","addressLocality":"Rio de Janeiro","addressRegion":"RJ","addressCountry":"BR"},
     ...(D.brand.instagramUrl?{"sameAs":[D.brand.instagramUrl]}:{}),
@@ -194,7 +194,7 @@ const planos = () => `
     <p class="lead">${esc(D.planos.lead)}</p>
     ${D.planos.incluido?`<div class="incluido"><span class="incluido__t">${esc(D.planos.incluidoTitle)}</span><ul>${D.planos.incluido.map(i=>`<li>${I.check}<span>${esc(i)}</span></li>`).join('')}</ul></div>`:''}
     <div class="plans">
-      ${D.planos.items.map(p=>`<div class="plan${p.featured?' plan--feat':''}">${p.tag?`<span class="plan__tag">${esc(p.tag)}</span>`:''}<div class="plan__name">${esc(p.name)}</div><div class="plan__unit">${esc(p.unit)}</div><div class="plan__price"><small>R$</small>${esc(p.price)}</div><p class="plan__desc">${esc(p.desc)}</p><a class="btn ${p.featured?'btn--cta':'btn--ghost'}" href="${wa('Olá, Carina! Tenho interesse no plano '+p.name+'. Pode me explicar como funciona?')}" target="_blank" rel="noopener">Agendar</a></div>`).join('\n      ')}
+      ${D.planos.items.map(p=>`<div class="plan${p.featured?' plan--feat':''}">${p.tag?`<span class="plan__tag">${esc(p.tag)}</span>`:''}<div class="plan__name">${esc(p.name)}</div><div class="plan__unit">${esc(p.unit)}</div><div class="plan__price"><small>R$</small>${esc(p.price)}</div>${p.installment?`<div class="plan__inst">${esc(p.installment)}</div>`:''}<p class="plan__desc">${esc(p.desc)}</p><a class="btn ${p.featured?'btn--cta':'btn--ghost'}" href="${wa('Olá, Carina! Tenho interesse no plano '+p.name+'. Pode me explicar como funciona?')}" target="_blank" rel="noopener">Agendar</a></div>`).join('\n      ')}
     </div>
     <p class="plans__note">${esc(D.planos.note)}</p>
   </div>
