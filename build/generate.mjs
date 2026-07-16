@@ -46,6 +46,13 @@ const head = () => `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(D.seo.title)}</title>
 <meta name="description" content="${esc(D.seo.description)}">
+<meta name="keywords" content="${esc(D.seo.keywords||'')}">
+<meta name="author" content="Carina Batista">
+<meta name="geo.region" content="BR-RJ">
+<meta name="geo.placename" content="Botafogo, Rio de Janeiro">
+<meta name="geo.position" content="-22.9515;-43.1841">
+<meta name="ICBM" content="-22.9515, -43.1841">${D.seo.gscVerification?`
+<meta name="google-site-verification" content="${esc(D.seo.gscVerification)}">`:''}
 <link rel="canonical" href="${D.brand.url}/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(D.seo.title)}">
@@ -79,10 +86,18 @@ function jsonLd(){
     "url":D.brand.url+"/",
     "image":D.brand.url+"/assets/img/logo-purple.png",
     "description":D.seo.description,
+    "@id":D.brand.url+"/#business",
     "telephone":"+"+D.brand.whatsapp,
     "priceRange":"R$ 350–3000",
-    "areaServed":"Botafogo, Rio de Janeiro",
-    "address":{"@type":"PostalAddress","addressLocality":"Rio de Janeiro","addressRegion":"RJ","addressCountry":"BR"},
+    "knowsLanguage":"pt-BR",
+    "areaServed":[
+      {"@type":"City","name":"Botafogo, Rio de Janeiro"},
+      {"@type":"Place","name":"Zona Sul do Rio de Janeiro"},
+      {"@type":"City","name":"Rio de Janeiro"}
+    ],
+    "address":{"@type":"PostalAddress","addressLocality":"Botafogo","addressRegion":"Rio de Janeiro - RJ","addressCountry":"BR"},
+    "geo":{"@type":"GeoCoordinates","latitude":-22.9515,"longitude":-43.1841},
+    "makesOffer":{"@type":"Offer","priceCurrency":"BRL","price":"350","itemOffered":{"@type":"Service","name":"Consulta nutricional individualizada"}},
     ...(D.brand.instagramUrl?{"sameAs":[D.brand.instagramUrl]}:{}),
     "availableService":[
       {"@type":"MedicalTherapy","name":"Nutrição clínica"},
@@ -253,7 +268,7 @@ const footer = () => `
   <div class="wrap ft__grid">
     <div class="ft__brand">
       <img src="assets/img/logo-badge.png" alt="Carina Batista Nutricionista">
-      <p>Nutrição com propósito. Acompanhamento individualizado para uma relação mais leve e saudável com a comida.</p>
+      <p>Nutricionista em Botafogo, na Zona Sul do Rio de Janeiro, e atendimento online. Acompanhamento individualizado para uma relação mais leve e saudável com a comida.</p>
     </div>
     <div>
       <h4>Navegação</h4>

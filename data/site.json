@@ -10,12 +10,14 @@
     "email": "",
     "whatsapp": "5521998270248",
     "whatsappLabel": "(21) 99827-0248",
-    "city": "Botafogo · Rio de Janeiro",
-    "atendimento": "Online e presencial em Botafogo"
+    "city": "Botafogo · Zona Sul · Rio de Janeiro",
+    "atendimento": "Online e presencial em Botafogo (Zona Sul do Rio de Janeiro)"
   },
   "seo": {
-    "title": "Carina Batista Nutricionista — emagrecimento, nutrição clínica e esportiva | Botafogo e online",
-    "description": "Nutricionista em Botafogo e atendimento online. Acompanhamento individualizado, com ciência e acolhimento, para emagrecer, cuidar da saúde e ganhar massa — sem dietas restritivas. Agende pelo WhatsApp.",
+    "title": "Nutricionista em Botafogo, Zona Sul RJ | Carina Batista — emagrecimento e nutrição clínica",
+    "description": "Nutricionista em Botafogo, na Zona Sul do Rio de Janeiro, e atendimento online. Carina Batista: acompanhamento individualizado para emagrecer, cuidar da saúde e ganhar massa — com ciência e acolhimento, sem dietas restritivas. Agende pelo WhatsApp.",
+    "keywords": "nutricionista Botafogo, nutricionista Zona Sul, nutricionista Rio de Janeiro, nutricionista online, emagrecimento, nutrição clínica, nutrição esportiva, bioimpedância",
+    "gscVerification": "",
     "ogImage": "assets/img/og-cover-v2.png"
   },
   "nav": [
@@ -35,7 +37,7 @@
     "ctaSecondaryHref": "#planos",
     "trust": [
       {"icon":"badge","text":"Nutricionista · CRN-4 21101466"},
-      {"icon":"screen","text":"Online e presencial em Botafogo"},
+      {"icon":"screen","text":"Botafogo, Zona Sul do Rio · e online"},
       {"icon":"heart","text":"Plano feito pra sua rotina"}
     ]
   },

@@ -34,4 +34,17 @@
   } else {
     els.forEach(function(el){ el.classList.add('in'); });
   }
+
+  // GA4 — mede clique no WhatsApp (conversão). Sem efeito até o GA4 estar plugado.
+  document.querySelectorAll('a[href*="wa.me/"], a[href*="api.whatsapp"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'whatsapp_click', {
+          link_url: a.href,
+          cta_text: (a.textContent || '').trim().slice(0, 80),
+          page_path: location.pathname
+        });
+      }
+    });
+  });
 })();
