@@ -136,7 +136,12 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;color:var(-
 .card p{font-size:15.5px;color:var(--ink-soft);line-height:1.6}
 
 /* ---------- "para quem" / dores ---------- */
-.pains{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:2rem}
+.pains-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(1.6rem,4vw,3rem);align-items:stretch}
+.pains-copy{display:flex;flex-direction:column}
+.pains-photo{margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--border);
+  box-shadow:var(--shadow);min-height:100%;background:var(--accent)}
+.pains-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+.pains{display:grid;grid-template-columns:1fr;gap:.7rem;margin-top:1.6rem}
 .pain{display:flex;gap:.85rem;align-items:flex-start;background:#fff;border:1px solid var(--border);
   border-radius:14px;padding:1.05rem 1.2rem}
 .pain svg{width:22px;height:22px;color:var(--secondary);flex:0 0 auto;margin-top:.15rem}
@@ -234,6 +239,8 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;color:var(-
   .hero__card{max-width:420px;margin:1rem auto 0}
   .about{grid-template-columns:1fr}
   .about__photo{max-width:360px;margin:0 auto}
+  .pains-grid{grid-template-columns:1fr}
+  .pains-photo{aspect-ratio:4/3;min-height:0;max-height:460px;max-width:520px;margin:0 auto;width:100%}
   .grid--3{grid-template-columns:1fr 1fr}
   .ft__grid{grid-template-columns:1fr 1fr}
 }

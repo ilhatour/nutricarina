@@ -132,13 +132,16 @@ const hero = () => `
 /* ---------- para quem (dores) ---------- */
 const pains = () => `
 <section class="section section--flush" id="para-quem">
-  <div class="wrap reveal">
-    <span class="eyebrow">${esc(D.pains.eyebrow)}</span>
-    <h2>${esc(D.pains.title)}</h2>
-    <p class="lead">${esc(D.pains.lead)}</p>
-    <div class="pains${D.pains.todo?' todo':''}">
-      ${D.pains.items.map(p=>`<div class="pain">${I.dot}<span>${esc(p)}</span></div>`).join('\n      ')}
+  <div class="wrap pains-grid reveal">
+    <div class="pains-copy">
+      <span class="eyebrow">${esc(D.pains.eyebrow)}</span>
+      <h2>${esc(D.pains.title)}</h2>
+      <p class="lead">${esc(D.pains.lead)}</p>
+      <div class="pains">
+        ${D.pains.items.map(p=>`<div class="pain">${I.dot}<span>${esc(p)}</span></div>`).join('\n        ')}
+      </div>
     </div>
+    ${D.pains.photo?`<figure class="pains-photo"><img src="${esc(D.pains.photo)}" alt="Carina Batista, nutricionista"></figure>`:''}
   </div>
   ${wave('var(--tint)')}
 </section>`;
