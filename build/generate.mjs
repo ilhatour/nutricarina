@@ -92,7 +92,6 @@ const header = () => `
 <header class="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="#top" aria-label="Carina Batista Nutricionista">
-      <img src="assets/img/logo-white.png" alt="Logo Carina Batista Nutricionista">
       <span class="brand__txt">
         <span class="brand__name">${esc(D.brand.name)}</span>
         <span class="brand__role">${esc(D.brand.role)}</span>
@@ -233,7 +232,7 @@ const footer = () => `
 <footer class="ft">
   <div class="wrap ft__grid">
     <div class="ft__brand">
-      <img src="assets/img/logo-white.png" alt="Carina Batista Nutricionista">
+      <img src="assets/img/logo-badge.png" alt="Carina Batista Nutricionista">
       <p>Nutrição com propósito. Acompanhamento individualizado para uma relação mais leve e saudável com a comida.</p>
     </div>
     <div>
