@@ -15,7 +15,7 @@
   },
   "seo": {
     "title": "Carina Batista Nutricionista — emagrecimento, nutrição clínica e esportiva | Botafogo e online",
-    "description": "Nutricionista em Botafogo e atendimento online. Acompanhamento individualizado para emagrecimento saudável, nutrição clínica e esportiva — sem dietas restritivas. Agende pelo WhatsApp.",
+    "description": "Nutricionista em Botafogo e atendimento online. Acompanhamento individualizado, com ciência e acolhimento, para emagrecer, cuidar da saúde e ganhar massa — sem dietas restritivas. Agende pelo WhatsApp.",
     "ogImage": "assets/img/og-cover-v2.png"
   },
   "nav": [
@@ -29,7 +29,7 @@
   "hero": {
     "eyebrow": "Nutrição com propósito",
     "titleHtml": "Reequilibre sua relação<br><em>com a comida</em>",
-    "sub": "Acompanhamento nutricional individualizado para emagrecer com saúde e ter mais energia — sem dietas milagrosas nem terrorismo alimentar. Online ou presencial em Botafogo.",
+    "sub": "Acompanhamento individualizado para emagrecer, cuidar da saúde e ter mais energia — com ciência e acolhimento, sem dietas restritivas nem terrorismo alimentar. Online ou presencial em Botafogo.",
     "ctaPrimary": "Agende sua avaliação",
     "ctaSecondary": "Ver planos",
     "ctaSecondaryHref": "#planos",
@@ -42,36 +42,40 @@
   "pains": {
     "eyebrow": "Você se identifica?",
     "title": "Cansada de recomeçar toda segunda-feira?",
-    "lead": "A maioria das pessoas que me procura já tentou de tudo. O problema não é força de vontade — é falta de um plano que caiba na sua vida.",
+    "lead": "A maioria das pessoas que me procura já tentou de tudo e chega insegura, com medo de mais uma dieta cheia de restrições. O problema nunca foi falta de força de vontade — foi falta de um plano que caiba na sua vida.",
     "photo": "assets/img/carina.jpg",
     "items": [
-      "Vive de dieta em dieta e nada se mantém",
-      "Sente culpa toda vez que come algo \"proibido\"",
-      "Quer emagrecer sem viver de folha e frango",
-      "Tem exames alterados e não sabe por onde começar",
-      "Falta energia e disposição no dia a dia",
-      "Treina, mas a alimentação não acompanha o objetivo"
+      "Recomeça a dieta toda segunda-feira e desiste poucos dias depois",
+      "Tem medo de ser julgada ou de receber uma dieta cheia de restrições",
+      "Acha que emagrecer é abrir mão de tudo o que gosta de comer",
+      "Já tentou de tudo e acredita que nunca vai conseguir",
+      "Quer cuidar da saúde ou de um exame alterado e não sabe por onde começar",
+      "Treina, mas a alimentação não acompanha o objetivo (emagrecer ou ganhar massa)"
     ]
   },
   "method": {
     "eyebrow": "Como funciona",
     "title": "Um método, quatro passos",
-    "lead": "Nada de plano genérico. A gente constrói junto, no seu ritmo, com acompanhamento de verdade.",
+    "lead": "A primeira consulta dura cerca de 1 hora e é um momento só seu. A gente constrói tudo junto — nada de plano genérico.",
     "steps": [
-      {"title":"Avaliação completa","text":"Conversamos sobre sua história, rotina, exames e objetivos. Aqui eu te escuto de verdade antes de propor qualquer coisa."},
-      {"title":"Plano individualizado","text":"Monto um plano alimentar realista, com alimentos que você gosta e que cabem no seu dia — não numa dieta de revista."},
-      {"title":"Acompanhamento próximo","text":"Nos planos, revemos tudo a cada 45 dias: ajustes, dúvidas e adaptações conforme a vida acontece. Você não fica sozinha."},
-      {"title":"Autonomia e resultado","text":"O objetivo não é te prender a mim: é te dar liberdade pra fazer boas escolhas pelo resto da vida."}
+      {"title":"Avaliação inicial","text":"Entendo seu histórico de saúde, exames, hábitos, rotina, preferências e o que você quer alcançar. Aqui eu te escuto de verdade."},
+      {"title":"Avaliação nutricional","text":"Analiso sua composição corporal com bioimpedância, medidas e sinais importantes para a sua saúde e qualidade de vida."},
+      {"title":"Estratégias personalizadas","text":"Montamos juntos um plano alimentar que respeita a sua realidade e é possível de manter no dia a dia — sem extremismos."},
+      {"title":"Orientações e acompanhamento","text":"Você sai da consulta com clareza, motivação e confiança — e segue com o meu suporte durante todo o processo."}
     ]
+  },
+  "quote": {
+    "text": "O melhor plano alimentar é aquele que você consegue seguir.",
+    "author": "Carina Batista"
   },
   "services": {
     "eyebrow": "Serviços",
     "title": "Como eu posso te ajudar",
     "lead": "",
     "items": [
-      {"icon":"leaf","title":"Emagrecimento saudável","text":"Perder peso sem dietas restritivas nem efeito sanfona, com um plano que cabe na sua rotina e que você consegue manter."},
-      {"icon":"pulse","title":"Nutrição clínica","text":"Alimentação ajustada ao seu quadro para mais saúde, disposição e melhora nos exames — com base na sua realidade."},
-      {"icon":"heart","title":"Nutrição esportiva","text":"Alimentação alinhada ao seu treino e objetivo: performance, recuperação e composição corporal."}
+      {"icon":"leaf","title":"Emagrecimento saudável","text":"Emagrecer sem abrir mão do que você gosta, com um plano que cabe na sua rotina e que você consegue manter."},
+      {"icon":"pulse","title":"Nutrição clínica","text":"Cuidar da saúde e controlar exames e doenças crônicas com uma alimentação feita para a sua realidade."},
+      {"icon":"heart","title":"Nutrição esportiva","text":"Ganho de massa (hipertrofia) e performance — alimentação alinhada ao seu treino e ao seu objetivo."}
     ]
   },
   "planos": {
@@ -79,8 +83,16 @@
     "title": "Escolha o acompanhamento ideal",
     "lead": "Nos planos, as consultas acontecem a cada 45 dias — o tempo certo pra avaliar sua evolução e ajustar o plano. Quanto mais longo o acompanhamento, melhor o resultado (e o custo por consulta).",
     "note": "Valores em reais. Formas de pagamento combinadas no agendamento.",
+    "incluidoTitle": "Todo acompanhamento inclui",
+    "incluido": [
+      "Plano alimentar personalizado no aplicativo",
+      "Avaliação de bioimpedância e medidas",
+      "Lista de compras e receitas",
+      "Orientações de suplementação",
+      "Acompanhamento entre as consultas"
+    ],
     "items": [
-      {"name":"Consulta avulsa","price":"350","unit":"consulta única","desc":"Avaliação individual completa com plano alimentar personalizado.","featured":false},
+      {"name":"Consulta avulsa","price":"350","unit":"consulta única","desc":"Avaliação individual completa (cerca de 1h) com plano alimentar personalizado.","featured":false},
       {"name":"Trimestral","price":"500","unit":"3 meses","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":false},
       {"name":"Semestral","price":"800","unit":"6 meses","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":false},
       {"name":"Anual","price":"1.200","unit":"12 meses","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":true,"tag":"Melhor custo-benefício"}
@@ -90,14 +102,15 @@
     "eyebrow": "Quem cuida de você",
     "title": "Prazer, sou a Carina",
     "bio": [
-      "Sou nutricionista apaixonada por transformar vidas por meio da alimentação. Tenho experiência em nutrição clínica e hospitalar, e meu propósito é ajudar pessoas a conquistarem saúde, qualidade de vida e autoestima através de um acompanhamento humanizado e baseado em evidências científicas.",
-      "Meu diferencial está em unir conhecimento técnico, escuta ativa e planos alimentares personalizados, mostrando que é possível alcançar resultados de forma equilibrada, sem dietas restritivas ou sofrimento. Meu compromisso é caminhar ao lado de cada paciente, tornando a alimentação uma aliada para uma vida mais saudável."
+      "Treino desde os 15 anos. Aos 18, fui pela primeira vez a uma nutricionista buscando melhorar meus resultados — e saí de lá com algo muito maior: a certeza de que a alimentação transforma o corpo, a saúde e a forma como a gente se sente. Foi ali que me apaixonei pela Nutrição.",
+      "Sou graduada em Nutrição pela Faculdade Bezerra de Araújo (FABA) e passei por experiências que uniram ciência e prática — no INCA e no Hospital do Andaraí, na rotina hospitalar e de alimentação. Cada uma me deu um olhar mais completo e humano sobre o cuidado.",
+      "Antes de pensar em qualquer dieta, eu escuto a sua história. Acredito numa nutrição leve, possível e sem extremismos — porque o melhor plano alimentar é aquele que você consegue seguir."
     ],
     "highlights": [
-      "Nutricionista — CRN-4 21101466",
-      "Experiência em nutrição clínica e hospitalar",
-      "Prática baseada em evidências científicas",
-      "Atendimento humanizado, online e presencial em Botafogo"
+      "Graduada em Nutrição (FABA) · CRN-4 21101466",
+      "Experiência hospitalar: INCA e Hospital do Andaraí",
+      "Atendimento acolhedor, individualizado e sem dietas extremas",
+      "Ciência e olhar humano para cada paciente"
     ],
     "photo": "assets/img/carina.jpg"
   },
@@ -105,16 +118,17 @@
     "eyebrow": "Dúvidas frequentes",
     "title": "Antes de agendar",
     "items": [
-      {"q":"O atendimento online funciona mesmo?","a":"Funciona sim. A consulta online é individual, por vídeo, com a mesma avaliação e o mesmo plano do presencial — você só não precisa sair de casa. O acompanhamento e os ajustes seguem iguais."},
-      {"q":"Vou ter que fazer dieta restritiva?","a":"Não. A proposta é o oposto do terrorismo alimentar: um plano com alimentos que você gosta e que cabem na sua rotina, pra você conseguir manter no longo prazo — sem passar fome nem cortar tudo."},
-      {"q":"Quanto custa?","a":"A consulta avulsa é R$ 350. Também há planos de acompanhamento: trimestral R$ 500, semestral R$ 800 e anual R$ 1.200, com consultas a cada 45 dias. Veja a seção Planos aqui em cima."},
-      {"q":"Como marco a consulta?","a":"É só chamar no WhatsApp. A gente combina o melhor horário e, se você optar por online ou presencial em Botafogo, alinho tudo por lá antes da primeira consulta."},
-      {"q":"De quanto em quanto tempo são os retornos?","a":"Nos planos de acompanhamento, as consultas acontecem a cada 45 dias — tempo ideal pra avaliar sua evolução e ajustar o plano conforme a vida acontece."}
+      {"q":"Vou ter que cortar tudo o que eu gosto?","a":"Não. Acredito que uma alimentação equilibrada tem espaço para prazer, flexibilidade e momentos especiais. A ideia é caber na sua vida, não te privar de tudo."},
+      {"q":"Será que EU vou conseguir seguir e manter?","a":"Vamos montar uma estratégia que se adapta à sua vida real — nada de dieta impossível. Como eu sempre digo: o melhor plano alimentar é aquele que você consegue seguir."},
+      {"q":"Já tentei de tudo e não deu certo. Vai funcionar comigo?","a":"Muita gente chega desacreditada depois de várias tentativas. Aqui o processo é construído com planejamento, acompanhamento e mudanças possíveis, respeitando o seu tempo e a sua individualidade."},
+      {"q":"O atendimento online funciona mesmo?","a":"Funciona sim. A consulta online é individual, por vídeo, com a mesma avaliação e o mesmo plano do presencial — você só não precisa sair de casa."},
+      {"q":"O que eu recebo além da consulta?","a":"Seu plano alimentar personalizado no aplicativo, lista de compras, receitas, avaliação de bioimpedância, orientações de suplementação e acompanhamento entre as consultas."},
+      {"q":"Quanto custa e como marco?","a":"A consulta avulsa é R$ 350 e há planos de acompanhamento (trimestral R$ 500, semestral R$ 800, anual R$ 1.200), com consultas a cada 45 dias. Para agendar, é só chamar no WhatsApp."}
     ]
   },
   "ctaband": {
     "title": "Pronta para começar de um jeito diferente?",
-    "sub": "A primeira avaliação já sai com um plano pensado pra você. Sem julgamento, no seu tempo.",
+    "sub": "A primeira avaliação já sai com um plano pensado pra você. Com acolhimento, ciência e sem julgamento — no seu tempo.",
     "cta": "Quero agendar minha avaliação"
   }
 }

@@ -195,6 +195,29 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;color:var(-
 @media (max-width:880px){.plans{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.plans{grid-template-columns:1fr}}
 
+/* ---------- inclusos nos planos ---------- */
+.incluido{margin-top:1.7rem;background:#fff;border:1px solid var(--border);border-radius:16px;
+  padding:1.2rem 1.5rem;box-shadow:var(--shadow)}
+.incluido__t{display:block;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--secondary);margin-bottom:.9rem}
+.incluido ul{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.6rem 1rem}
+.incluido li{display:flex;gap:.55rem;align-items:center;font-size:15px;color:var(--ink)}
+.incluido li svg{width:18px;height:18px;color:var(--secondary);flex:0 0 auto}
+
+/* ---------- faixa de citação (assinatura) ---------- */
+.quoteband{background:var(--primary);color:#fff;position:relative;overflow:hidden}
+.quoteband::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(70% 120% at 12% 0%,rgba(146,87,180,.5),transparent 55%)}
+.quoteband__in{position:relative;z-index:1;text-align:center;max-width:900px;margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) 0}
+.quoteband__mark{display:block;font-family:var(--display);font-size:clamp(3.4rem,9vw,5.5rem);
+  line-height:.5;color:var(--secondary);opacity:.65}
+.quoteband__q{font-family:var(--display);font-style:italic;font-weight:500;color:#fff;
+  font-size:clamp(1.55rem,4.2vw,2.5rem);line-height:1.3;text-wrap:balance;margin-top:.4rem}
+.quoteband__by{display:block;margin-top:1.5rem;font-size:13px;letter-spacing:.18em;
+  text-transform:uppercase;color:#C9A9E6}
+
 /* ---------- CTA band (faixa roxa) ---------- */
 .ctaband{background:var(--primary);color:#fff;position:relative;overflow:hidden}
 .ctaband::before{content:"";position:absolute;inset:0;background:

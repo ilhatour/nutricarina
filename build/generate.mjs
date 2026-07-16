@@ -157,8 +157,19 @@ const method = () => `
       ${D.method.steps.map(s=>`<div class="step"><div class="step__n"></div><div><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div></div>`).join('\n      ')}
     </div>
   </div>
-  ${wave('var(--bg)')}
+  ${wave('var(--primary)')}
 </section>`;
+
+/* ---------- citação (assinatura da Carina) ---------- */
+const quote = () => D.quote ? `
+<section class="quoteband section--flush">
+  <div class="wrap quoteband__in reveal">
+    <span class="quoteband__mark" aria-hidden="true">&ldquo;</span>
+    <p class="quoteband__q">${esc(D.quote.text)}</p>
+    <span class="quoteband__by">${esc(D.quote.author)} · Nutricionista</span>
+  </div>
+  ${wave('var(--bg)')}
+</section>` : '';
 
 /* ---------- serviços ---------- */
 const services = () => `
@@ -181,6 +192,7 @@ const planos = () => `
     <span class="eyebrow">${esc(D.planos.eyebrow)}</span>
     <h2>${esc(D.planos.title)}</h2>
     <p class="lead">${esc(D.planos.lead)}</p>
+    ${D.planos.incluido?`<div class="incluido"><span class="incluido__t">${esc(D.planos.incluidoTitle)}</span><ul>${D.planos.incluido.map(i=>`<li>${I.check}<span>${esc(i)}</span></li>`).join('')}</ul></div>`:''}
     <div class="plans">
       ${D.planos.items.map(p=>`<div class="plan${p.featured?' plan--feat':''}">${p.tag?`<span class="plan__tag">${esc(p.tag)}</span>`:''}<div class="plan__name">${esc(p.name)}</div><div class="plan__unit">${esc(p.unit)}</div><div class="plan__price"><small>R$</small>${esc(p.price)}</div><p class="plan__desc">${esc(p.desc)}</p><a class="btn ${p.featured?'btn--cta':'btn--ghost'}" href="${wa('Olá, Carina! Tenho interesse no plano '+p.name+'. Pode me explicar como funciona?')}" target="_blank" rel="noopener">Agendar</a></div>`).join('\n      ')}
     </div>
@@ -266,7 +278,7 @@ const footer = () => `
 
 /* ---------- montagem ---------- */
 const YEAR = '2026'; // estático (Date.now indisponível no harness; atualizar manualmente)
-const html = [head(), header(), hero(), pains(), method(), services(), planos(), about(), faq(), ctaband(), footer()]
+const html = [head(), header(), hero(), pains(), method(), quote(), services(), planos(), about(), faq(), ctaband(), footer()]
   .join('\n').replace(/\{\{YEAR\}\}/g, YEAR);
 
 writeFileSync(join(ROOT,'index.html'), html);
