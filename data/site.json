@@ -1,0 +1,116 @@
+{
+  "brand": {
+    "name": "Carina Batista",
+    "role": "Nutricionista",
+    "domain": "nutricarinabat.com",
+    "url": "https://nutricarinabat.com",
+    "crn": "CRN-4 21101466",
+    "instagram": "@carinabat.nutri",
+    "instagramUrl": "https://www.instagram.com/carinabat.nutri/",
+    "email": "",
+    "whatsapp": "5521998270248",
+    "whatsappLabel": "(21) 99827-0248",
+    "city": "Botafogo · Rio de Janeiro",
+    "atendimento": "Online e presencial em Botafogo"
+  },
+  "seo": {
+    "title": "Carina Batista Nutricionista — emagrecimento, nutrição clínica e esportiva | Botafogo e online",
+    "description": "Nutricionista em Botafogo e atendimento online. Acompanhamento individualizado para emagrecimento saudável, nutrição clínica e esportiva — sem dietas restritivas. Agende pelo WhatsApp.",
+    "ogImage": "assets/img/og-cover.png"
+  },
+  "nav": [
+    {"label":"Sobre","href":"#sobre"},
+    {"label":"Método","href":"#metodo"},
+    {"label":"Serviços","href":"#servicos"},
+    {"label":"Planos","href":"#planos"},
+    {"label":"Dúvidas","href":"#faq"}
+  ],
+  "hero": {
+    "eyebrow": "Nutrição com propósito",
+    "titleHtml": "Reequilibre sua relação<br><em>com a comida</em>",
+    "sub": "Acompanhamento nutricional individualizado para emagrecer com saúde e ter mais energia — sem dietas milagrosas nem terrorismo alimentar. Online ou presencial em Botafogo.",
+    "ctaPrimary": "Agende sua avaliação",
+    "ctaSecondary": "Ver planos",
+    "ctaSecondaryHref": "#planos",
+    "trust": [
+      {"icon":"badge","text":"Nutricionista · CRN-4 21101466"},
+      {"icon":"screen","text":"Online e presencial em Botafogo"},
+      {"icon":"heart","text":"Plano feito pra sua rotina"}
+    ]
+  },
+  "pains": {
+    "eyebrow": "Você se identifica?",
+    "title": "Cansada de recomeçar toda segunda-feira?",
+    "lead": "A maioria das pessoas que me procura já tentou de tudo. O problema não é força de vontade — é falta de um plano que caiba na sua vida.",
+    "items": [
+      "Vive de dieta em dieta e nada se mantém",
+      "Sente culpa toda vez que come algo \"proibido\"",
+      "Quer emagrecer sem viver de folha e frango",
+      "Tem exames alterados e não sabe por onde começar",
+      "Falta energia e disposição no dia a dia",
+      "Treina, mas a alimentação não acompanha o objetivo"
+    ]
+  },
+  "method": {
+    "eyebrow": "Como funciona",
+    "title": "Um método, quatro passos",
+    "lead": "Nada de plano genérico. A gente constrói junto, no seu ritmo, com acompanhamento de verdade.",
+    "steps": [
+      {"title":"Avaliação completa","text":"Conversamos sobre sua história, rotina, exames e objetivos. Aqui eu te escuto de verdade antes de propor qualquer coisa."},
+      {"title":"Plano individualizado","text":"Monto um plano alimentar realista, com alimentos que você gosta e que cabem no seu dia — não numa dieta de revista."},
+      {"title":"Acompanhamento próximo","text":"Nos planos, revemos tudo a cada 45 dias: ajustes, dúvidas e adaptações conforme a vida acontece. Você não fica sozinha."},
+      {"title":"Autonomia e resultado","text":"O objetivo não é te prender a mim: é te dar liberdade pra fazer boas escolhas pelo resto da vida."}
+    ]
+  },
+  "services": {
+    "eyebrow": "Serviços",
+    "title": "Como eu posso te ajudar",
+    "lead": "",
+    "items": [
+      {"icon":"leaf","title":"Emagrecimento saudável","text":"Perder peso sem dietas restritivas nem efeito sanfona, com um plano que cabe na sua rotina e que você consegue manter."},
+      {"icon":"pulse","title":"Nutrição clínica","text":"Alimentação ajustada ao seu quadro para mais saúde, disposição e melhora nos exames — com base na sua realidade."},
+      {"icon":"heart","title":"Nutrição esportiva","text":"Alimentação alinhada ao seu treino e objetivo: performance, recuperação e composição corporal."}
+    ]
+  },
+  "planos": {
+    "eyebrow": "Planos e investimento",
+    "title": "Escolha o acompanhamento ideal",
+    "lead": "Nos planos, as consultas acontecem a cada 45 dias — o tempo certo pra avaliar sua evolução e ajustar o plano. Quanto mais longo o acompanhamento, melhor o resultado (e o custo por consulta).",
+    "note": "Valores em reais. Formas de pagamento combinadas no agendamento.",
+    "items": [
+      {"name":"Consulta avulsa","price":"350","unit":"consulta única","desc":"Avaliação individual completa com plano alimentar personalizado.","featured":false},
+      {"name":"Trimestral","price":"500","unit":"3 meses","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":false},
+      {"name":"Semestral","price":"800","unit":"6 meses","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":false},
+      {"name":"Anual","price":"1.200","unit":"12 meses","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":true,"tag":"Melhor custo-benefício"}
+    ]
+  },
+  "about": {
+    "eyebrow": "Quem cuida de você",
+    "title": "Prazer, sou a Carina",
+    "bio": "Sou nutricionista com atuação clínica e esportiva e foco em emagrecimento. Atendo online e presencialmente em Botafogo, sempre com planos individualizados — nada de dieta pronta. Meu trabalho é te ajudar a construir uma relação leve e sustentável com a comida, com resultado que se mantém.",
+    "expandBio": true,
+    "highlights": [
+      "Nutricionista — CRN-4 21101466",
+      "Nutrição clínica e esportiva",
+      "Foco em emagrecimento saudável",
+      "Atendimento online e presencial em Botafogo"
+    ],
+    "photo": ""
+  },
+  "faq": {
+    "eyebrow": "Dúvidas frequentes",
+    "title": "Antes de agendar",
+    "items": [
+      {"q":"O atendimento online funciona mesmo?","a":"Funciona sim. A consulta online é individual, por vídeo, com a mesma avaliação e o mesmo plano do presencial — você só não precisa sair de casa. O acompanhamento e os ajustes seguem iguais."},
+      {"q":"Vou ter que fazer dieta restritiva?","a":"Não. A proposta é o oposto do terrorismo alimentar: um plano com alimentos que você gosta e que cabem na sua rotina, pra você conseguir manter no longo prazo — sem passar fome nem cortar tudo."},
+      {"q":"Quanto custa?","a":"A consulta avulsa é R$ 350. Também há planos de acompanhamento: trimestral R$ 500, semestral R$ 800 e anual R$ 1.200, com consultas a cada 45 dias. Veja a seção Planos aqui em cima."},
+      {"q":"Como marco a consulta?","a":"É só chamar no WhatsApp. A gente combina o melhor horário e, se você optar por online ou presencial em Botafogo, alinho tudo por lá antes da primeira consulta."},
+      {"q":"De quanto em quanto tempo são os retornos?","a":"Nos planos de acompanhamento, as consultas acontecem a cada 45 dias — tempo ideal pra avaliar sua evolução e ajustar o plano conforme a vida acontece."}
+    ]
+  },
+  "ctaband": {
+    "title": "Pronta para começar de um jeito diferente?",
+    "sub": "A primeira avaliação já sai com um plano pensado pra você. Sem julgamento, no seu tempo.",
+    "cta": "Quero agendar minha avaliação"
+  }
+}
