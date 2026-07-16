@@ -85,11 +85,11 @@
     "note": "Valores em reais. Formas de pagamento combinadas no agendamento.",
     "incluidoTitle": "Todo acompanhamento inclui",
     "incluido": [
-      "Plano alimentar personalizado no aplicativo",
-      "Avaliação de bioimpedância e medidas",
-      "Lista de compras e receitas",
-      "Orientações de suplementação",
-      "Acompanhamento entre as consultas"
+      {"icon":"app","text":"Plano alimentar no aplicativo"},
+      {"icon":"gauge","text":"Bioimpedância e medidas"},
+      {"icon":"list","text":"Lista de compras e receitas"},
+      {"icon":"pill","text":"Orientações de suplementação"},
+      {"icon":"chat","text":"Acompanhamento entre consultas"}
     ],
     "items": [
       {"name":"Consulta avulsa","price":"500","unit":"consulta única","installment":"","desc":"Avaliação individual completa (cerca de 1h) com plano alimentar personalizado.","featured":false},

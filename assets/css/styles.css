@@ -196,15 +196,19 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;color:var(-
 @media (max-width:880px){.plans{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.plans{grid-template-columns:1fr}}
 
-/* ---------- inclusos nos planos ---------- */
-.incluido{margin-top:1.7rem;background:#fff;border:1px solid var(--border);border-radius:16px;
-  padding:1.2rem 1.5rem;box-shadow:var(--shadow)}
-.incluido__t{display:block;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--secondary);margin-bottom:.9rem}
-.incluido ul{list-style:none;margin:0;padding:0;display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.6rem 1rem}
-.incluido li{display:flex;gap:.55rem;align-items:center;font-size:15px;color:var(--ink)}
-.incluido li svg{width:18px;height:18px;color:var(--secondary);flex:0 0 auto}
+/* ---------- inclusos nos planos (tiles) ---------- */
+.incluido{margin-top:1.9rem}
+.incluido__t{display:block;text-align:center;font-size:12.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--secondary);margin-bottom:1.4rem}
+.incluido ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.incluido li{flex:1 1 172px;max-width:216px;display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:.85rem;background:#fff;border:1px solid var(--border);border-radius:18px;
+  padding:1.5rem 1rem;box-shadow:var(--shadow)}
+.incluido__ic{width:50px;height:50px;border-radius:14px;background:var(--accent);color:var(--primary);
+  display:grid;place-items:center}
+.incluido__ic svg{width:25px;height:25px}
+.incluido__lb{font-size:14.5px;color:var(--ink);line-height:1.35;font-weight:500}
+@media (max-width:560px){.incluido li{flex:1 1 140px}}
 
 /* ---------- faixa de citação (assinatura) ---------- */
 .quoteband{background:var(--primary);color:#fff;position:relative;overflow:hidden}

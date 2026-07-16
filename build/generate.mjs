@@ -23,6 +23,11 @@ const I = {
   check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
   spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg>',
   dot:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  app:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>',
+  gauge:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19a8 8 0 1116 0"/><path d="M12 19l4-5"/><circle cx="12" cy="19" r="1.1" fill="currentColor" stroke="none"/></svg>',
+  list:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9.5 3.4h5a1 1 0 011 1V6a1 1 0 01-1 1h-5a1 1 0 01-1-1V4.4a1 1 0 011-1z"/><path d="M8.5 11.5h7M8.5 15.5h4.5"/></svg>',
+  pill:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="8.8" width="18.4" height="6.4" rx="3.2" transform="rotate(-45 12 12)"/><path d="M8.6 8.6l6.8 6.8"/></svg>',
+  chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 01-10.9 6.7L3 20l1.8-6.9A7.5 7.5 0 1121 11.5z"/></svg>',
   wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.6.2-.7 1-.9 1.1-.3.2-.6 0a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5a.5.5 0 000-.5L9 6.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3A2.8 2.8 0 006.3 9c0 1.5 1.1 3 1.3 3.3a12 12 0 004.6 4c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3s.2-1.1.2-1.3-.2-.1-.5-.3zM12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2z"/></svg>'
 };
 
@@ -192,7 +197,7 @@ const planos = () => `
     <span class="eyebrow">${esc(D.planos.eyebrow)}</span>
     <h2>${esc(D.planos.title)}</h2>
     <p class="lead">${esc(D.planos.lead)}</p>
-    ${D.planos.incluido?`<div class="incluido"><span class="incluido__t">${esc(D.planos.incluidoTitle)}</span><ul>${D.planos.incluido.map(i=>`<li>${I.check}<span>${esc(i)}</span></li>`).join('')}</ul></div>`:''}
+    ${D.planos.incluido?`<div class="incluido"><span class="incluido__t">${esc(D.planos.incluidoTitle)}</span><ul>${D.planos.incluido.map(i=>`<li><span class="incluido__ic">${I[i.icon]||I.check}</span><span class="incluido__lb">${esc(i.text)}</span></li>`).join('')}</ul></div>`:''}
     <div class="plans">
       ${D.planos.items.map(p=>`<div class="plan${p.featured?' plan--feat':''}">${p.tag?`<span class="plan__tag">${esc(p.tag)}</span>`:''}<div class="plan__name">${esc(p.name)}</div><div class="plan__unit">${esc(p.unit)}</div><div class="plan__price"><small>R$</small>${esc(p.price)}</div>${p.installment?`<div class="plan__inst">${esc(p.installment)}</div>`:''}<p class="plan__desc">${esc(p.desc)}</p><a class="btn ${p.featured?'btn--cta':'btn--ghost'}" href="${wa('Olá, Carina! Tenho interesse no plano '+p.name+'. Pode me explicar como funciona?')}" target="_blank" rel="noopener">Agendar</a></div>`).join('\n      ')}
     </div>
