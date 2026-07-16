@@ -87,15 +87,17 @@
   "about": {
     "eyebrow": "Quem cuida de você",
     "title": "Prazer, sou a Carina",
-    "bio": "Sou nutricionista com atuação clínica e esportiva e foco em emagrecimento. Atendo online e presencialmente em Botafogo, sempre com planos individualizados — nada de dieta pronta. Meu trabalho é te ajudar a construir uma relação leve e sustentável com a comida, com resultado que se mantém.",
-    "expandBio": true,
+    "bio": [
+      "Sou nutricionista apaixonada por transformar vidas por meio da alimentação. Tenho experiência em nutrição clínica e hospitalar, e meu propósito é ajudar pessoas a conquistarem saúde, qualidade de vida e autoestima através de um acompanhamento humanizado e baseado em evidências científicas.",
+      "Meu diferencial está em unir conhecimento técnico, escuta ativa e planos alimentares personalizados, mostrando que é possível alcançar resultados de forma equilibrada, sem dietas restritivas ou sofrimento. Meu compromisso é caminhar ao lado de cada paciente, tornando a alimentação uma aliada para uma vida mais saudável."
+    ],
     "highlights": [
       "Nutricionista — CRN-4 21101466",
-      "Nutrição clínica e esportiva",
-      "Foco em emagrecimento saudável",
-      "Atendimento online e presencial em Botafogo"
+      "Experiência em nutrição clínica e hospitalar",
+      "Prática baseada em evidências científicas",
+      "Atendimento humanizado, online e presencial em Botafogo"
     ],
-    "photo": ""
+    "photo": "assets/img/carina.jpg"
   },
   "faq": {
     "eyebrow": "Dúvidas frequentes",

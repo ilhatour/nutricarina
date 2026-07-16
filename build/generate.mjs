@@ -22,11 +22,16 @@ const I = {
   pulse:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg>',
   check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
   spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg>',
-  wa:'<svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.6.2-.7 1-.9 1.1-.3.2-.6 0a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5a.5.5 0 000-.5L9 6.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3A2.8 2.8 0 006.3 9c0 1.5 1.1 3 1.3 3.3a12 12 0 004.6 4c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3s.2-1.1.2-1.3-.2-.1-.5-.3zM12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2z"/></svg>'
+  dot:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.6.2-.7 1-.9 1.1-.3.2-.6 0a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5a.5.5 0 000-.5L9 6.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3A2.8 2.8 0 006.3 9c0 1.5 1.1 3 1.3 3.3a12 12 0 004.6 4c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3s.2-1.1.2-1.3-.2-.1-.5-.3zM12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2z"/></svg>'
 };
 
-/* ---------- divisor em pétala (assinatura) — com overshoot p/ sem filete ---------- */
-const petal = (fill, flip=false) => `<svg class="petal${flip?' petal--flip':''}" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path fill="${fill}" d="M0,71 L0,34 C90,58 180,58 270,40 C345,25 375,25 450,44 C525,63 555,63 630,42 C705,21 735,21 810,42 C885,63 915,63 990,44 C1065,25 1110,28 1200,40 L1200,71 Z"/></svg>`;
+/* ---------- divisor de ONDA (assinatura) ----------
+   Vai DENTRO da seção de cima (última filha, full-width), pintada com a cor
+   da seção de BAIXO. A seção de cima fica com padding-bottom:0 (.section--flush)
+   e a onda tem overshoot (path até y=61 > viewBox 60) → sem filete de 1px.
+   As partes transparentes mostram o fundo da própria seção → sem "linha quebrada". */
+const wave = (fill) => `<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path fill="${fill}" d="M0,61 L0,30 C170,53 340,57 500,41 C640,27 720,26 840,39 C980,54 1080,53 1200,36 L1200,61 Z"/></svg>`;
 
 /* ---------- head ---------- */
 const head = () => `<!DOCTYPE html>
@@ -42,8 +47,13 @@ const head = () => `<!DOCTYPE html>
 <meta property="og:description" content="${esc(D.seo.description)}">
 <meta property="og:url" content="${D.brand.url}/">
 <meta property="og:image" content="${D.brand.url}/${D.seo.ogImage}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Carina Batista Nutricionista — Botafogo e atendimento online">
+<meta property="og:site_name" content="Carina Batista Nutricionista">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${D.brand.url}/${D.seo.ogImage}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/logo-purple.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,32 +123,30 @@ const hero = () => `
       </div>
     </div>
     <aside class="hero__card reveal in">
-      <img src="assets/img/logo-purple.png" alt="Símbolo Carina Batista" style="background:#fff;border-radius:20px;padding:10px">
-      <b>${esc(D.brand.name)}</b>
-      <span>${esc(D.brand.role)}</span>
+      <img src="assets/img/logo-badge.png" alt="Selo Carina Batista Nutricionista">
       <p>Cada plano nasce da sua história — não de uma dieta pronta.</p>
     </aside>
   </div>
-  ${petal('var(--bg)')}
+  ${wave('var(--bg)')}
 </section>`;
 
 /* ---------- para quem (dores) ---------- */
 const pains = () => `
-<section class="section" id="para-quem">
+<section class="section section--flush" id="para-quem">
   <div class="wrap reveal">
     <span class="eyebrow">${esc(D.pains.eyebrow)}</span>
     <h2>${esc(D.pains.title)}</h2>
     <p class="lead">${esc(D.pains.lead)}</p>
     <div class="pains${D.pains.todo?' todo':''}">
-      ${D.pains.items.map(p=>`<div class="pain">${I.spark}<span>${esc(p)}</span></div>`).join('\n      ')}
+      ${D.pains.items.map(p=>`<div class="pain">${I.dot}<span>${esc(p)}</span></div>`).join('\n      ')}
     </div>
   </div>
+  ${wave('var(--tint)')}
 </section>`;
 
 /* ---------- método ---------- */
 const method = () => `
-${petal('var(--tint)','flip')}
-<section class="section section--tint" id="metodo">
+<section class="section section--tint section--flush" id="metodo">
   <div class="wrap reveal">
     <span class="eyebrow">${esc(D.method.eyebrow)}</span>
     <h2>${esc(D.method.title)}</h2>
@@ -147,12 +155,12 @@ ${petal('var(--tint)','flip')}
       ${D.method.steps.map(s=>`<div class="step"><div class="step__n"></div><div><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div></div>`).join('\n      ')}
     </div>
   </div>
-</section>
-${petal('var(--tint)')}`;
+  ${wave('var(--bg)')}
+</section>`;
 
 /* ---------- serviços ---------- */
 const services = () => `
-<section class="section" id="servicos">
+<section class="section section--flush" id="servicos">
   <div class="wrap reveal">
     <span class="eyebrow">${esc(D.services.eyebrow)}</span>
     <h2>${esc(D.services.title)}</h2>
@@ -161,12 +169,12 @@ const services = () => `
       ${D.services.items.map(s=>`<div class="card"><div class="card__ic">${I[s.icon]||I.leaf}</div><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div>`).join('\n      ')}
     </div>
   </div>
+  ${wave('var(--tint)')}
 </section>`;
 
 /* ---------- planos ---------- */
 const planos = () => `
-${petal('var(--tint)','flip')}
-<section class="section section--tint" id="planos">
+<section class="section section--tint section--flush" id="planos">
   <div class="wrap reveal">
     <span class="eyebrow">${esc(D.planos.eyebrow)}</span>
     <h2>${esc(D.planos.title)}</h2>
@@ -176,8 +184,8 @@ ${petal('var(--tint)','flip')}
     </div>
     <p class="plans__note">${esc(D.planos.note)}</p>
   </div>
-</section>
-${petal('var(--tint)')}`;
+  ${wave('var(--bg)')}
+</section>`;
 
 /* ---------- sobre ---------- */
 const about = () => `
@@ -189,7 +197,7 @@ const about = () => `
     <div>
       <span class="about__badge">${I.leaf}${esc(D.about.eyebrow)}</span>
       <h2>${esc(D.about.title)}</h2>
-      <p>${esc(D.about.bio)}</p>
+      ${(Array.isArray(D.about.bio)?D.about.bio:[D.about.bio]).map(p=>`<p>${esc(p)}</p>`).join('\n      ')}
       <ul>
         ${D.about.highlights.map(h=>`<li>${I.check}<span>${esc(h)}</span></li>`).join('\n        ')}
       </ul>
@@ -199,7 +207,7 @@ const about = () => `
 
 /* ---------- faq ---------- */
 const faq = () => `
-<section class="section" id="faq">
+<section class="section section--flush" id="faq">
   <div class="wrap reveal" style="text-align:center">
     <span class="eyebrow" style="justify-content:center">${esc(D.faq.eyebrow)}</span>
     <h2 style="margin:0 auto">${esc(D.faq.title)}</h2>
@@ -207,11 +215,11 @@ const faq = () => `
   <div class="wrap"><div class="faq${D.faq.todo?' todo':''}">
     ${D.faq.items.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('\n    ')}
   </div></div>
+  ${wave('var(--primary)')}
 </section>`;
 
 /* ---------- CTA band ---------- */
 const ctaband = () => `
-${petal('var(--primary)','flip')}
 <section class="ctaband">
   <div class="wrap ctaband__in reveal">
     <h2>${esc(D.ctaband.title)}</h2>
