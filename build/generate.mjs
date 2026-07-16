@@ -7,7 +7,7 @@ import { dirname, join } from 'node:path';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const D = JSON.parse(readFileSync(join(ROOT, 'data', 'site.json'), 'utf8'));
 
-const GA4 = ""; // ← plugar "G-XXXXXXX" quando a propriedade GA4 existir
+const GA4 = "G-Q0BQNTX5PT"; // propriedade "Carina Batista Nutricionista" (conta Ilha Tour), fluxo nutricarinabat.com
 
 /* ---------- helpers ---------- */
 const esc = s => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
