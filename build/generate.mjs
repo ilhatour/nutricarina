@@ -80,7 +80,7 @@ function jsonLd(){
     "image":D.brand.url+"/assets/img/logo-purple.png",
     "description":D.seo.description,
     "telephone":"+"+D.brand.whatsapp,
-    "priceRange":"R$ 500–3000",
+    "priceRange":"R$ 350–3000",
     "areaServed":"Botafogo, Rio de Janeiro",
     "address":{"@type":"PostalAddress","addressLocality":"Rio de Janeiro","addressRegion":"RJ","addressCountry":"BR"},
     ...(D.brand.instagramUrl?{"sameAs":[D.brand.instagramUrl]}:{}),

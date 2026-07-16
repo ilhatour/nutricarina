@@ -92,7 +92,7 @@
       {"icon":"chat","text":"Acompanhamento entre consultas"}
     ],
     "items": [
-      {"name":"Consulta avulsa","price":"500","unit":"consulta única","installment":"","desc":"Avaliação individual completa (cerca de 1h) com plano alimentar personalizado.","featured":false},
+      {"name":"Consulta avulsa","price":"350","unit":"consulta única","installment":"","desc":"Avaliação individual completa (cerca de 1h) com plano alimentar personalizado.","featured":false},
       {"name":"Essencial","price":"900","unit":"3 meses","installment":"ou 3x de R$ 300","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":false},
       {"name":"Evolução","price":"1.650","unit":"6 meses","installment":"ou 6x de R$ 275","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":false},
       {"name":"Transformação","price":"3.000","unit":"12 meses","installment":"ou 12x de R$ 250","desc":"Acompanhamento contínuo, com consultas a cada 45 dias.","featured":true,"tag":"Melhor custo-benefício"}
@@ -123,7 +123,7 @@
       {"q":"Já tentei de tudo e não deu certo. Vai funcionar comigo?","a":"Muita gente chega desacreditada depois de várias tentativas. Aqui o processo é construído com planejamento, acompanhamento e mudanças possíveis, respeitando o seu tempo e a sua individualidade."},
       {"q":"O atendimento online funciona mesmo?","a":"Funciona sim. A consulta online é individual, por vídeo, com a mesma avaliação e o mesmo plano do presencial — você só não precisa sair de casa."},
       {"q":"O que eu recebo além da consulta?","a":"Seu plano alimentar personalizado no aplicativo, lista de compras, receitas, avaliação de bioimpedância, orientações de suplementação e acompanhamento entre as consultas."},
-      {"q":"Quanto custa e como marco?","a":"A consulta avulsa é R$ 500. Também há planos de acompanhamento, com consultas a cada 45 dias: Essencial (3 meses) R$ 900, Evolução (6 meses) R$ 1.650 e Transformação (12 meses) R$ 3.000 — com opção de parcelamento. Para agendar, é só chamar no WhatsApp."}
+      {"q":"Quanto custa e como marco?","a":"A consulta avulsa é R$ 350. Também há planos de acompanhamento, com consultas a cada 45 dias: Essencial (3 meses) R$ 900, Evolução (6 meses) R$ 1.650 e Transformação (12 meses) R$ 3.000 — com opção de parcelamento. Para agendar, é só chamar no WhatsApp."}
     ]
   },
   "ctaband": {
