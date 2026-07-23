@@ -27,10 +27,15 @@
   # /qualquer.html → /qualquer (301, remove a extensão)
   RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
   RewriteRule ^ /%1 [R=301,L]
-  # servir a página sem extensão: /blog → blog.html (interno)
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # NÃO redirecionar dir sem barra (senão /blog vira /blog/ por causa da pasta blog/)
+  DirectorySlash Off
+  # servir a página sem extensão: /blog e /blog/slug → .html correspondente
+  # (checa só a existência do .html; funciona mesmo havendo a pasta blog/)
   RewriteCond %{REQUEST_FILENAME}\.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
+
+# sem listagem de diretório
+Options -Indexes
 
 ErrorDocument 404 /404.html
