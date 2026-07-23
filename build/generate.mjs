@@ -391,11 +391,48 @@ const buildBlogIndex = () => {
   ].join('\n').replace(/\{\{YEAR\}\}/g, YEAR);
 };
 
+/* ---------- página de links (bio do Instagram) ---------- */
+const linksPage = () => {
+  const url = D.brand.url + "/links";
+  return [
+    head({
+      title:"Links · "+D.brand.name+" "+D.brand.role,
+      description:"Agende sua avaliação, conheça o site e leia o blog de nutrição de "+D.brand.name+" — "+D.brand.city+".",
+      canonical:url,
+      ogImage:D.seo.ogImage
+    }),
+    `<main class="lt">
+  <div class="lt-avatar"><img src="/assets/img/logo-badge.png" alt="${esc(D.brand.name)} ${esc(D.brand.role)}"></div>
+  <h1 class="lt-name">${esc(D.brand.name)}</h1>
+  <p class="lt-role">${esc(D.brand.role)} · ${esc(D.brand.crn)}</p>
+  <p class="lt-tag">${esc(D.brand.city)} · atendimento também online</p>
+  <nav class="lt-links">
+    <a class="lt-link lt-link--primary" href="${wa('Olá, Carina! Vim pelo link da bio e quero agendar minha avaliação.')}" target="_blank" rel="noopener">
+      ${I.wa}<span><strong>Agendar minha avaliação</strong><small>Direto no WhatsApp</small></span>
+    </a>
+    <a class="lt-link lt-link--ghost" href="/">
+      ${I.leaf}<span><strong>Conhecer o site</strong><small>Método, planos e atendimento</small></span>
+    </a>
+    <a class="lt-link lt-link--ghost" href="/blog">
+      ${I.list}<span><strong>Ler o blog de nutrição</strong><small>Artigos, dicas e receitas</small></span>
+    </a>
+  </nav>
+  <p class="lt-foot">${esc(D.brand.instagram)} · ${esc(D.brand.domain)}</p>
+</main>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>`
+  ].join('\n').replace(/\{\{YEAR\}\}/g, YEAR);
+};
+
 /* ---------- montagem ---------- */
 const html = [head(), header(), hero(), pains(), method(), quote(), services(), planos(), about(), faq(), ctaband(), footer()]
   .join('\n').replace(/\{\{YEAR\}\}/g, YEAR);
 
 writeFileSync(join(ROOT,'index.html'), html);
+
+/* links (bio do Instagram) */
+writeFileSync(join(ROOT,'links.html'), linksPage());
 
 /* blog */
 const posts = (D.blog&&D.blog.posts)||[];
@@ -413,6 +450,7 @@ writeFileSync(join(ROOT,'favicon.svg'), favicon);
 /* sitemap + robots */
 const sitemapUrls = [
   `  <url><loc>${D.brand.url}/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>`,
+  `  <url><loc>${D.brand.url}/links</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>`,
   ...(posts.length?[`  <url><loc>${D.brand.url}/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`]:[]),
   ...posts.map(p=>`  <url><loc>${D.brand.url}/blog/${p.slug}</loc><lastmod>${p.date}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`)
 ];

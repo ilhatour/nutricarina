@@ -330,3 +330,23 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;color:var(-
 .post-cta p{color:#E4D6F0;font-size:14.5px;line-height:1.5;max-width:42ch;margin:0}
 .post-cta .btn{flex:0 0 auto}
 @media (max-width:640px){.post-cta{flex-direction:column;align-items:flex-start}.post-cta .btn{width:100%;justify-content:center}}
+
+/* ---------- página de links (bio do Instagram) ---------- */
+.lt{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:3.4rem 1.4rem 3rem;
+  background:radial-gradient(120% 90% at 50% 0%,#6C1E92 0%,var(--primary) 42%,#2C0A3E 100%);text-align:center}
+.lt-avatar{width:96px;height:96px;border-radius:50%;padding:5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.32)}
+.lt-avatar img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+.lt-name{font-family:var(--display);color:#fff;font-size:1.7rem;font-weight:500;margin-top:1.15rem}
+.lt-role{font-family:var(--body);color:#E7CFF5;font-size:.86rem;letter-spacing:.03em;margin-top:.4rem}
+.lt-tag{font-family:var(--body);color:rgba(255,255,255,.68);font-size:.82rem;margin-top:.5rem;max-width:300px}
+.lt-links{width:100%;max-width:420px;display:flex;flex-direction:column;gap:.85rem;margin-top:2.3rem}
+.lt-link{display:flex;align-items:center;gap:.9rem;width:100%;padding:1.05rem 1.3rem;border-radius:16px;
+  font-family:var(--body);text-align:left;transition:transform .15s ease}
+.lt-link:hover{transform:translateY(-2px)}
+.lt-link svg{width:22px;height:22px;flex:0 0 auto}
+.lt-link strong{display:block;font-size:1.01rem;font-weight:600}
+.lt-link small{display:block;font-size:.76rem;font-weight:500;opacity:.72;margin-top:2px}
+.lt-link--primary{background:var(--cta);color:#fff;box-shadow:0 14px 34px -14px rgba(124,34,206,.75)}
+.lt-link--ghost{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.26);color:#fff}
+.lt-link--ghost:hover{background:rgba(255,255,255,.13)}
+.lt-foot{margin-top:2.8rem;color:rgba(255,255,255,.48);font-size:.76rem;letter-spacing:.02em}
