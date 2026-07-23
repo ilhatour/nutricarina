@@ -1,11 +1,12 @@
 // Carina Batista Nutricionista — gerador estático (Node puro, zero-dep, ESM)
 // Uso: node build/generate.mjs  → escreve index.html, sitemap.xml, robots.txt, favicon.svg
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const D = JSON.parse(readFileSync(join(ROOT, 'data', 'site.json'), 'utf8'));
+try { D.blog = JSON.parse(readFileSync(join(ROOT, 'data', 'blog.json'), 'utf8')); } catch(e){ D.blog = { posts: [] }; }
 
 const GA4 = "G-Q0BQNTX5PT"; // propriedade "Carina Batista Nutricionista" (conta Ilha Tour), fluxo nutricarinabat.com
 
@@ -38,14 +39,21 @@ const I = {
    As partes transparentes mostram o fundo da própria seção → sem "linha quebrada". */
 const wave = (fill) => `<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path fill="${fill}" d="M0,61 L0,30 C170,53 340,57 500,41 C640,27 720,26 840,39 C980,54 1080,53 1200,36 L1200,61 Z"/></svg>`;
 
-/* ---------- head ---------- */
-const head = () => `<!DOCTYPE html>
+/* ---------- head (aceita SEO por página) ---------- */
+const head = (o={}) => {
+  const title = o.title || D.seo.title;
+  const desc = o.description || D.seo.description;
+  const canonical = o.canonical || (D.brand.url+"/");
+  const ogImage = o.ogImage ? (o.ogImage.startsWith('http')?o.ogImage:D.brand.url+"/"+o.ogImage) : (D.brand.url+"/"+D.seo.ogImage);
+  const ogType = o.ogType || "website";
+  const ld = o.jsonLd || jsonLd();
+  return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(D.seo.title)}</title>
-<meta name="description" content="${esc(D.seo.description)}">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
 <meta name="keywords" content="${esc(D.seo.keywords||'')}">
 <meta name="author" content="Carina Batista">
 <meta name="geo.region" content="BR-RJ">
@@ -53,30 +61,28 @@ const head = () => `<!DOCTYPE html>
 <meta name="geo.position" content="-22.9515;-43.1841">
 <meta name="ICBM" content="-22.9515, -43.1841">${D.seo.gscVerification?`
 <meta name="google-site-verification" content="${esc(D.seo.gscVerification)}">`:''}
-<link rel="canonical" href="${D.brand.url}/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="${esc(D.seo.title)}">
-<meta property="og:description" content="${esc(D.seo.description)}">
-<meta property="og:url" content="${D.brand.url}/">
-<meta property="og:image" content="${D.brand.url}/${D.seo.ogImage}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Carina Batista Nutricionista — Botafogo e atendimento online">
+<link rel="canonical" href="${canonical}">
+<meta property="og:type" content="${ogType}">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${canonical}">
+<meta property="og:image" content="${ogImage}">
 <meta property="og:site_name" content="Carina Batista Nutricionista">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="${D.brand.url}/${D.seo.ogImage}">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/logo-purple.png">
+<meta name="twitter:image" content="${ogImage}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/logo-purple.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.v2.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd())}</script>${GA4?`
+<link rel="stylesheet" href="/assets/css/styles.v2.css">
+<script type="application/ld+json">${JSON.stringify(ld)}</script>${GA4?`
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA4}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA4}');</script>`:''}
 </head>
 <body>`;
+};
 
 function jsonLd(){
   return {
@@ -111,7 +117,7 @@ function jsonLd(){
 const header = () => `
 <header class="hdr">
   <div class="wrap hdr__in">
-    <a class="brand" href="#top" aria-label="Carina Batista Nutricionista">
+    <a class="brand" href="/#top" aria-label="Carina Batista Nutricionista">
       <span class="brand__txt">
         <span class="brand__name">${esc(D.brand.name)}</span>
         <span class="brand__role">${esc(D.brand.role)}</span>
@@ -267,7 +273,7 @@ const footer = () => `
 <footer class="ft">
   <div class="wrap ft__grid">
     <div class="ft__brand">
-      <img src="assets/img/logo-badge.png" alt="Carina Batista Nutricionista">
+      <img src="/assets/img/logo-badge.png" alt="Carina Batista Nutricionista">
       <p>Nutricionista em Botafogo, na Zona Sul do Rio de Janeiro, e atendimento online. Acompanhamento individualizado para uma relação mais leve e saudável com a comida.</p>
     </div>
     <div>
@@ -292,26 +298,128 @@ const footer = () => `
   </div>
 </footer>
 <a class="wa" href="${wa()}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">${I.wa}</a>
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>`;
 
-/* ---------- montagem ---------- */
+/* ================= BLOG ================= */
 const YEAR = '2026'; // estático (Date.now indisponível no harness; atualizar manualmente)
+
+const renderBlocks = (blocks) => (blocks||[]).map(b=>{
+  if (typeof b === 'string') return `<p>${esc(b)}</p>`;
+  if (b.h2) return `<h2>${esc(b.h2)}</h2>`;
+  if (b.list) return `<ul class="post-list">${b.list.map(li=>`<li>${esc(li)}</li>`).join('')}</ul>`;
+  if (b.quote) return `<blockquote class="post-quote">${esc(b.quote)}</blockquote>`;
+  if (b.tip) return `<div class="post-tip">💡 ${esc(b.tip)}</div>`;
+  return '';
+}).join('\n        ');
+
+const blogCta = () => `
+<aside class="post-cta">
+  <div>
+    <h3>Quer um plano feito pra você?</h3>
+    <p>Agende sua avaliação com a Carina — online ou presencial em Botafogo. Sem dietas restritivas, no seu tempo.</p>
+  </div>
+  <a class="btn btn--ondark" href="${wa('Olá, Carina! Vim pelo blog e quero agendar minha avaliação.')}" target="_blank" rel="noopener">${I.wa}Agendar pelo WhatsApp</a>
+</aside>`;
+
+const buildPost = (p) => {
+  const url = D.brand.url+"/blog/"+p.slug+".html";
+  const ld = {
+    "@context":"https://schema.org","@type":"BlogPosting",
+    "headline":p.title,"description":p.seoDesc||p.excerpt,"image":D.brand.url+"/"+p.cover,
+    "datePublished":p.date,"dateModified":p.date,
+    "author":{"@type":"Person","name":p.author},
+    "publisher":{"@type":"Organization","name":"Carina Batista Nutricionista","logo":{"@type":"ImageObject","url":D.brand.url+"/assets/img/logo-purple.png"}},
+    "mainEntityOfPage":url
+  };
+  return [
+    head({title:(p.seoTitle||p.title),description:(p.seoDesc||p.excerpt),canonical:url,ogImage:p.cover,ogType:"article",jsonLd:ld}),
+    header(),
+    `<article class="post">
+  <div class="wrap post__head reveal in">
+    <a class="post__back" href="/blog.html">← Blog</a>
+    <span class="post__cat">${esc(p.category)}</span>
+    <h1>${esc(p.title)}</h1>
+    <div class="post__meta">Por ${esc(p.author)} · Nutricionista · ${esc(p.dateLabel)}</div>
+  </div>
+  <figure class="post__cover"><img src="/${p.cover}" alt="${esc(p.coverAlt||p.title)}"></figure>
+  <div class="wrap post__body reveal in">
+        ${renderBlocks(p.content)}
+        ${blogCta()}
+  </div>
+  ${wave('var(--primary)')}
+</article>`,
+    footer()
+  ].join('\n').replace(/\{\{YEAR\}\}/g, YEAR);
+};
+
+const buildBlogIndex = () => {
+  const posts = (D.blog&&D.blog.posts)||[];
+  const url = D.brand.url+"/blog.html";
+  const ld = {"@context":"https://schema.org","@type":"Blog","name":"Blog · Carina Batista Nutricionista","url":url,
+    "blogPost":posts.map(p=>({"@type":"BlogPosting","headline":p.title,"url":D.brand.url+"/blog/"+p.slug+".html","datePublished":p.date}))};
+  return [
+    head({title:"Blog de nutrição · Carina Batista Nutricionista | Botafogo e online",description:"Artigos sobre emagrecimento saudável, nutrição clínica e esportiva e como ter uma relação leve com a comida — pela nutricionista Carina Batista, em Botafogo e online.",canonical:url,jsonLd:ld}),
+    header(),
+    `<section class="bloghero section--flush">
+  <div class="wrap reveal in">
+    <span class="eyebrow bloghero__eyebrow">Blog da Carina</span>
+    <h1>Sua relação com a comida, mais leve</h1>
+    <p class="bloghero__sub">Emagrecimento sem sofrimento, nutrição com ciência e acolhimento — do jeito que a Carina atende.</p>
+  </div>
+  ${wave('var(--bg)')}
+</section>
+<section class="section section--flush">
+  <div class="wrap">
+    <div class="bloggrid">
+      ${posts.map(p=>`<a class="bcard reveal" href="/blog/${p.slug}.html">
+        <div class="bcard__img"><img src="/${p.cover}" alt="${esc(p.coverAlt||p.title)}" loading="lazy"></div>
+        <div class="bcard__body">
+          <span class="bcard__cat">${esc(p.category)}</span>
+          <h2>${esc(p.title)}</h2>
+          <p>${esc(p.excerpt)}</p>
+          <span class="bcard__meta">${esc(p.dateLabel)} · ${esc(p.author)}</span>
+        </div>
+      </a>`).join('\n      ')}
+    </div>
+  </div>
+  ${wave('var(--primary)')}
+</section>`,
+    ctaband(),
+    footer()
+  ].join('\n').replace(/\{\{YEAR\}\}/g, YEAR);
+};
+
+/* ---------- montagem ---------- */
 const html = [head(), header(), hero(), pains(), method(), quote(), services(), planos(), about(), faq(), ctaband(), footer()]
   .join('\n').replace(/\{\{YEAR\}\}/g, YEAR);
 
 writeFileSync(join(ROOT,'index.html'), html);
+
+/* blog */
+const posts = (D.blog&&D.blog.posts)||[];
+if (posts.length){
+  mkdirSync(join(ROOT,'blog'), {recursive:true});
+  writeFileSync(join(ROOT,'blog.html'), buildBlogIndex());
+  posts.forEach(p=>writeFileSync(join(ROOT,'blog',p.slug+'.html'), buildPost(p)));
+  console.log('✓ Blog: blog.html + '+posts.length+' post(s)');
+}
 
 /* favicon.svg — símbolo simplificado (lótus roxa) */
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#521370"/><g fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 16c5 6 5 14 0 20-5-6-5-14 0-20z"/><path d="M20 26c7 1 11 6 12 12-7-1-11-6-12-12z"/><path d="M44 26c-7 1-11 6-12 12 7-1 11-6 12-12z"/><path d="M26 44c3-3 9-3 12 0"/></g></svg>`;
 writeFileSync(join(ROOT,'favicon.svg'), favicon);
 
 /* sitemap + robots */
+const sitemapUrls = [
+  `  <url><loc>${D.brand.url}/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>`,
+  ...(posts.length?[`  <url><loc>${D.brand.url}/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`]:[]),
+  ...posts.map(p=>`  <url><loc>${D.brand.url}/blog/${p.slug}.html</loc><lastmod>${p.date}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`)
+];
 writeFileSync(join(ROOT,'sitemap.xml'),
 `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>${D.brand.url}/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+${sitemapUrls.join('\n')}
 </urlset>`);
 
 writeFileSync(join(ROOT,'robots.txt'),

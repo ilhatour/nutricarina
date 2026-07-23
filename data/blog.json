@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "slug": "emagrecer-sem-dieta-restritiva",
+      "title": "Como emagrecer sem dieta restritiva (e sem efeito sanfona)",
+      "seoTitle": "Como emagrecer sem dieta restritiva e sem efeito sanfona | Carina Batista Nutricionista",
+      "seoDesc": "Cansada de recomeçar a dieta toda segunda? Veja como emagrecer sem cortar tudo o que você gosta e sem efeito sanfona, com um plano que cabe na sua rotina. Por Carina Batista, nutricionista em Botafogo e online.",
+      "excerpt": "Recomeçar a dieta toda segunda-feira e desistir poucos dias depois tem explicação — e não é falta de força de vontade. Veja como emagrecer de um jeito que você realmente consegue manter.",
+      "date": "2026-07-16",
+      "dateLabel": "16 de julho de 2026",
+      "author": "Carina Batista",
+      "category": "Emagrecimento",
+      "cover": "assets/img/blog/emagrecer-sem-dieta-restritiva.jpg",
+      "coverAlt": "Prato colorido e equilibrado com legumes, folhas e grãos — emagrecimento sem dieta restritiva",
+      "content": [
+        "Se você já recomeçou a dieta em uma segunda-feira cheia de esperança e desistiu poucos dias depois, respira: isso não é falta de força de vontade. É o resultado quase inevitável de um plano restritivo demais — daqueles que cortam tudo o que você gosta e não cabem na vida real.",
+        "A boa notícia é que dá pra emagrecer sem sofrer, sem passar fome e sem viver de folha e frango. Neste post eu te explico por que as dietas muito radicais falham e o que fazer diferente.",
+        {"h2": "Por que a dieta muito restritiva não funciona"},
+        "Quando você corta grupos inteiros de alimentos de uma vez, o corpo entende como privação. Vem a fome intensa, a vontade de comer aquilo que ficou \"proibido\" e, mais cedo ou mais tarde, o famoso descontrole. Aí bate a culpa, você desiste — e recomeça tudo na próxima segunda.",
+        "Esse vai e volta é o que chamamos de efeito sanfona: perde peso rápido, recupera mais rápido ainda. Além de frustrante, ele bagunça sua relação com a comida e a sua autoestima.",
+        {"h2": "Emagrecer sem sofrimento é possível"},
+        "Emagrecer de verdade não é sobre comer o mínimo possível — é sobre construir um jeito de comer que você consiga manter no dia a dia. Um plano que respeita a sua rotina, os seus horários e o que você gosta.",
+        {"quote": "O melhor plano alimentar é aquele que você consegue seguir."},
+        "Quando o plano é possível, os resultados aparecem e — o mais importante — se mantêm. Sem terrorismo alimentar, sem listas de \"nunca mais\".",
+        {"h2": "5 passos para emagrecer de um jeito que se mantém"},
+        {"list": [
+          "Monte pratos coloridos: quanto mais variedade de vegetais, legumes e folhas, mais nutrientes e mais saciedade.",
+          "Não corte tudo o que você ama — inclua com equilíbrio. Prazer também faz parte de uma alimentação saudável.",
+          "Coma com atenção, sem pressa e sem tela. Isso ajuda o corpo a reconhecer a saciedade.",
+          "Priorize comida de verdade e capriche na proteína e na fibra em cada refeição.",
+          "Tenha constância, não perfeição. Um deslize não estraga o processo — desistir, sim."
+        ]},
+        {"tip": "Antes de cortar um alimento da sua rotina, pergunte: \"eu consigo manter isso pelos próximos meses?\". Se a resposta for não, provavelmente é restritivo demais."},
+        {"h2": "Quando vale a pena ter acompanhamento"},
+        "Cada corpo é diferente, e o que funciona para uma pessoa pode não funcionar para você. Um acompanhamento individualizado avalia sua história, seus exames, sua composição corporal (com bioimpedância) e monta um plano feito para a sua realidade — com ajustes ao longo do caminho.",
+        "É exatamente assim que eu atendo: com ciência, acolhimento e um plano que cabe na sua vida. Online, de onde você estiver, ou presencialmente em Botafogo, na Zona Sul do Rio de Janeiro."
+      ]
+    }
+  ]
+}

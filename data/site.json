@@ -21,12 +21,13 @@
     "ogImage": "assets/img/og-cover-v2.png"
   },
   "nav": [
-    {"label":"Início","href":"#top"},
-    {"label":"Método","href":"#metodo"},
-    {"label":"Serviços","href":"#servicos"},
-    {"label":"Planos","href":"#planos"},
-    {"label":"Sobre","href":"#sobre"},
-    {"label":"Dúvidas","href":"#faq"}
+    {"label":"Início","href":"/#top"},
+    {"label":"Método","href":"/#metodo"},
+    {"label":"Serviços","href":"/#servicos"},
+    {"label":"Planos","href":"/#planos"},
+    {"label":"Sobre","href":"/#sobre"},
+    {"label":"Blog","href":"/blog.html"},
+    {"label":"Dúvidas","href":"/#faq"}
   ],
   "hero": {
     "eyebrow": "Nutrição com propósito",
