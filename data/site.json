@@ -26,7 +26,7 @@
     {"label":"Serviços","href":"/#servicos"},
     {"label":"Planos","href":"/#planos"},
     {"label":"Sobre","href":"/#sobre"},
-    {"label":"Blog","href":"/blog.html"},
+    {"label":"Blog","href":"/blog"},
     {"label":"Dúvidas","href":"/#faq"}
   ],
   "hero": {

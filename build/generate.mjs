@@ -324,7 +324,7 @@ const blogCta = () => `
 </aside>`;
 
 const buildPost = (p) => {
-  const url = D.brand.url+"/blog/"+p.slug+".html";
+  const url = D.brand.url+"/blog/"+p.slug;
   const ld = {
     "@context":"https://schema.org","@type":"BlogPosting",
     "headline":p.title,"description":p.seoDesc||p.excerpt,"image":D.brand.url+"/"+p.cover,
@@ -338,7 +338,7 @@ const buildPost = (p) => {
     header(),
     `<article class="post">
   <div class="wrap post__head reveal in">
-    <a class="post__back" href="/blog.html">← Blog</a>
+    <a class="post__back" href="/blog">← Blog</a>
     <span class="post__cat">${esc(p.category)}</span>
     <h1>${esc(p.title)}</h1>
     <div class="post__meta">Por ${esc(p.author)} · Nutricionista · ${esc(p.dateLabel)}</div>
@@ -356,9 +356,9 @@ const buildPost = (p) => {
 
 const buildBlogIndex = () => {
   const posts = (D.blog&&D.blog.posts)||[];
-  const url = D.brand.url+"/blog.html";
+  const url = D.brand.url+"/blog";
   const ld = {"@context":"https://schema.org","@type":"Blog","name":"Blog · Carina Batista Nutricionista","url":url,
-    "blogPost":posts.map(p=>({"@type":"BlogPosting","headline":p.title,"url":D.brand.url+"/blog/"+p.slug+".html","datePublished":p.date}))};
+    "blogPost":posts.map(p=>({"@type":"BlogPosting","headline":p.title,"url":D.brand.url+"/blog/"+p.slug,"datePublished":p.date}))};
   return [
     head({title:"Blog de nutrição · Carina Batista Nutricionista | Botafogo e online",description:"Artigos sobre emagrecimento saudável, nutrição clínica e esportiva e como ter uma relação leve com a comida — pela nutricionista Carina Batista, em Botafogo e online.",canonical:url,jsonLd:ld}),
     header(),
@@ -373,7 +373,7 @@ const buildBlogIndex = () => {
 <section class="section section--flush">
   <div class="wrap">
     <div class="bloggrid">
-      ${posts.map(p=>`<a class="bcard reveal" href="/blog/${p.slug}.html">
+      ${posts.map(p=>`<a class="bcard reveal" href="/blog/${p.slug}">
         <div class="bcard__img"><img src="/${p.cover}" alt="${esc(p.coverAlt||p.title)}" loading="lazy"></div>
         <div class="bcard__body">
           <span class="bcard__cat">${esc(p.category)}</span>
@@ -413,8 +413,8 @@ writeFileSync(join(ROOT,'favicon.svg'), favicon);
 /* sitemap + robots */
 const sitemapUrls = [
   `  <url><loc>${D.brand.url}/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>`,
-  ...(posts.length?[`  <url><loc>${D.brand.url}/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`]:[]),
-  ...posts.map(p=>`  <url><loc>${D.brand.url}/blog/${p.slug}.html</loc><lastmod>${p.date}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`)
+  ...(posts.length?[`  <url><loc>${D.brand.url}/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`]:[]),
+  ...posts.map(p=>`  <url><loc>${D.brand.url}/blog/${p.slug}</loc><lastmod>${p.date}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`)
 ];
 writeFileSync(join(ROOT,'sitemap.xml'),
 `<?xml version="1.0" encoding="UTF-8"?>
