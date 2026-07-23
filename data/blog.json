@@ -35,6 +35,82 @@
         "Cada corpo é diferente, e o que funciona para uma pessoa pode não funcionar para você. Um acompanhamento individualizado avalia sua história, seus exames, sua composição corporal (com bioimpedância) e monta um plano feito para a sua realidade — com ajustes ao longo do caminho.",
         "É exatamente assim que eu atendo: com ciência, acolhimento e um plano que cabe na sua vida. Online, de onde você estiver, ou presencialmente em Botafogo, na Zona Sul do Rio de Janeiro."
       ]
+    },
+    {
+      "slug": "cafe-da-manha-saudavel-para-emagrecer",
+      "title": "Café da manhã saudável para emagrecer: o que comer (e o que evitar)",
+      "seoTitle": "Café da manhã saudável para emagrecer: o que comer | Carina Batista Nutricionista",
+      "seoDesc": "Descubra o que comer no café da manhã para emagrecer com saúde: combinações de proteína, fibra e boas gorduras, exemplos práticos e os erros mais comuns. Por Carina Batista, nutricionista em Botafogo e online.",
+      "excerpt": "O café da manhã pode ser sua maior aliada no emagrecimento — ou o motivo da fome descontrolada às 10h. Veja como montar um café da manhã que sustenta, sacia e ainda cabe na correria do dia.",
+      "date": "2026-07-20",
+      "dateLabel": "20 de julho de 2026",
+      "author": "Carina Batista",
+      "category": "Rotina alimentar",
+      "cover": "assets/img/blog/cafe-da-manha-saudavel-para-emagrecer.jpg",
+      "coverAlt": "Tigela de mingau de aveia com frutas frescas — café da manhã saudável para emagrecer",
+      "content": [
+        "\"Devo tomar café da manhã pra emagrecer ou pular?\" — essa é uma das perguntas que mais escuto no consultório. A resposta curta: depende muito menos de pular ou não, e muito mais do que tem no seu prato quando você come.",
+        "Um café da manhã mal montado (só carboidrato simples, sem proteína nem fibra) segura pouco a fome e te deixa beliscando o resto da manhã. Um café da manhã bem montado sustenta, evita picos de fome e ainda ajuda no seu foco e disposição.",
+        {"h2": "Por que a combinação importa mais que o horário"},
+        "Não existe um horário mágico para comer — existe uma combinação que funciona. O segredo de um café da manhã que ajuda no emagrecimento é ter, ao mesmo tempo: proteína, fibra e uma boa gordura. Essa combinação retarda o esvaziamento do estômago e evita aquele pico de fome no meio da manhã.",
+        {"tip": "Se você sente muita fome antes do almoço, é provável que falte proteína ou fibra no seu café da manhã — não que ele seja \"grande demais\"."},
+        {"h2": "O que incluir no seu café da manhã"},
+        {"list": [
+          "Uma fonte de proteína: ovos, iogurte natural, queijo branco, whey ou até frango desfiado.",
+          "Uma fonte de fibra: aveia, chia, linhaça, frutas com casca ou pão integral de verdade.",
+          "Uma boa gordura: abacate, pasta de amendoim integral, castanhas ou azeite.",
+          "Líquido sem açúcar: água, café sem açúcar ou chá — hidratar também faz parte."
+        ]},
+        {"h2": "3 combinações práticas para o dia a dia"},
+        {"list": [
+          "Aveia com iogurte natural, frutas vermelhas e uma colher de pasta de amendoim.",
+          "Ovos mexidos com queijo branco, torrada integral e meio abacate amassado.",
+          "Vitamina de banana com whey ou leite, aveia e canela — pronta em 3 minutos."
+        ]},
+        {"h2": "O que evitar (ou pelo menos não fazer todo dia)"},
+        "Pão branco puro, sucos de caixinha, cereais açucarados e bolachas recheadas entregam açúcar rápido sem sustentar. Você até sente saciedade nos primeiros minutos, mas a fome volta forte pouco depois — e aí é mais fácil exagerar no lanche da manhã ou no almoço.",
+        {"quote": "Não existe alimento proibido — existe frequência e contexto. O problema não é comer pão doce um dia, é ele ser sempre a única opção do café da manhã."},
+        {"h2": "E se eu não tenho tempo de manhã?"},
+        "Praticidade importa — e muito. Deixar a aveia de molho na noite anterior, cozinhar ovos com antecedência ou ter frutas já lavadas na geladeira resolve 90% do problema da correria. O objetivo não é ter um café da manhã perfeito, é ter um café da manhã possível na sua rotina real.",
+        "Cada corpo responde de um jeito diferente aos alimentos, e a quantidade certa para você depende do seu histórico, sua rotina e seus objetivos. Um acompanhamento individualizado ajuda a descobrir exatamente o que funciona no seu caso — sem forçar um modelo genérico de \"café da manhã ideal\"."
+      ]
+    },
+    {
+      "slug": "o-que-comer-antes-e-depois-do-treino",
+      "title": "O que comer antes e depois do treino para ganhar massa muscular",
+      "seoTitle": "O que comer antes e depois do treino para ganhar massa muscular | Carina Batista",
+      "seoDesc": "Guia prático de nutrição esportiva: o que comer antes e depois do treino para ter energia, recuperar melhor e ganhar massa muscular. Por Carina Batista, nutricionista esportiva em Botafogo e online.",
+      "excerpt": "Treinar bem é metade do caminho — a outra metade é o que você come antes e depois. Veja como montar sua alimentação pré e pós-treino para render mais e recuperar melhor.",
+      "date": "2026-07-23",
+      "dateLabel": "23 de julho de 2026",
+      "author": "Carina Batista",
+      "category": "Nutrição esportiva",
+      "cover": "assets/img/blog/o-que-comer-antes-e-depois-do-treino.jpg",
+      "coverAlt": "Prato com frango grelhado, arroz e folhas verdes — alimentação pós-treino para ganho de massa muscular",
+      "content": [
+        "Treino desde os 15 anos, então essa é uma pergunta que eu já ouvi (e fiz) de muitos jeitos: \"o que eu preciso comer para o treino render e o músculo crescer?\". A resposta não é uma dieta mágica — é entender o papel de cada refeição ao redor do treino.",
+        {"h2": "Antes do treino: energia disponível, sem pesar"},
+        "A refeição pré-treino existe para te dar combustível — não para te deixar empachada. O ideal é priorizar carboidratos de fácil digestão de 1 a 3 horas antes, com uma proteína leve junto.",
+        {"list": [
+          "1 a 3 horas antes: banana com aveia, pão integral com ovo, ou arroz com frango em quantidade moderada.",
+          "30 a 60 minutos antes (se o treino for logo cedo): uma fruta ou uma vitamina leve — algo rápido de digerir.",
+          "Evite refeições muito gordurosas ou muito volumosas perto do horário do treino — elas competem por energia com a digestão."
+        ]},
+        {"tip": "Se você treina em jejum, tudo bem — mas preste atenção em como o seu corpo responde. Para muita gente, um pouco de carboidrato antes melhora bastante o desempenho."},
+        {"h2": "Depois do treino: a janela que realmente importa"},
+        "É depois do treino que o músculo é reconstruído — e é aí que a proteína faz a diferença. O objetivo da refeição pós-treino é repor energia e fornecer os blocos (aminoácidos) para a recuperação muscular.",
+        {"list": [
+          "Proteína de qualidade: frango, ovos, peixe, carne magra ou whey protein.",
+          "Carboidrato para repor o glicogênio: arroz, batata-doce, pão integral ou frutas.",
+          "Não precisa ser nos primeiros 30 minutos — o mito da \"janela anabólica\" é bem mais flexível do que se pensava. O importante é comer bem nas horas seguintes."
+        ]},
+        {"h2": "Um exemplo de prato pós-treino"},
+        "Frango grelhado, arroz (branco ou integral) e uma boa porção de vegetais verdes é um clássico por um motivo: entrega proteína, carboidrato e fibra na medida certa para recuperação, sem complicação nenhuma para montar.",
+        {"quote": "Ganho de massa não é sobre uma refeição perfeita — é sobre consistência ao longo de semanas."},
+        {"h2": "Quanto de proteína eu realmente preciso?"},
+        "A quantidade ideal de proteína varia de acordo com o seu peso, o seu treino e o seu objetivo — não existe um número único que sirva para todo mundo, mesmo que a internet diga o contrário. Isso (junto com o resto do seu plano alimentar) é justamente o que um acompanhamento individualizado calcula com precisão, considerando também sua composição corporal avaliada por bioimpedância.",
+        "Trabalho com nutrição esportiva olhando para o seu treino, sua rotina e seus exames — para que a alimentação realmente sustente o resultado que você busca, seja hipertrofia, performance ou definição. Atendo online e presencialmente em Botafogo, na Zona Sul do Rio de Janeiro."
+      ]
     }
   ]
 }
